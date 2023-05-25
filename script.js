@@ -14,7 +14,7 @@ function mainLogic() {
         const secretNumberFeild = document.querySelector(".number")
         const highScoreFeild = document.querySelector('.highscore');
         const scoreField = document.querySelector('.score');
-        const animateText = document.querySelector('.animateText');
+        
 
         if (guessFeild > 20 || guessFeild < 0) {
             displayMessage("Out of range! 🚫");
@@ -33,7 +33,7 @@ function mainLogic() {
             secretNumberFeild.textContent = secretNumber;
             document.querySelector("body").style.backgroundColor = "#60b347";
             secretNumberFeild.style.width = "30rem";
-            animateText.style.display = 'none';
+            
 
 
             if (score > highscore) {
@@ -50,7 +50,7 @@ function mainLogic() {
                 displayMessage('💥 You lost the game!');
                 document.querySelector('body').style.backgroundColor = 'red';
                 scoreField.textContent = 0;
-                animateText.style.display = 'none';
+                
 
             }
         }
@@ -73,7 +73,7 @@ function reset() {
 
         document.querySelector('body').style.backgroundColor = '#222';
         secretNumberFeild.style.width = '15rem';
-        document.querySelector('.animateText').style.display = 'initial';
+        
     });
 }
 
